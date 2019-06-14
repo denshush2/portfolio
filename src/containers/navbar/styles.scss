@@ -1,0 +1,30 @@
+@import "../../assets/styles/colors.scss";
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  background-color: $accent;
+  height: 4em;
+  &-icon {
+    height: 3em !important;
+    fill: $text !important;
+    width: 3em !important;
+    .material-design-icon__svg {
+      height: 3em !important;
+      fill: $text !important;
+      width: 3em !important;
+    }
+  }
+  &-navigation {
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    &-link {
+      font-size: 2em;
+      color: white !important;
+      &-active {
+        text-decoration: underline;
+      }
+    }
+  }
+}

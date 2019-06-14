@@ -1,0 +1,19 @@
+@import "../../../assets/styles/colors.scss";
+.homeLinks {
+  background-color: azure;
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  &-icon {
+    height: 4em !important;
+    fill: $accent !important;
+    width: 4em !important;
+    .material-design-icon__svg {
+      height: 4em !important;
+      fill: $accent !important;
+      width: 4em !important;
+    }
+  }
+}
