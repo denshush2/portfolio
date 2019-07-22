@@ -8,7 +8,8 @@ import config from './config';
 import './assets/styles/index.scss';
 import 'vue-material-design-icons/styles.css';
 import 'vue-material/dist/vue-material.min.css';
-import 'vue-material/dist/theme/default.css';
+// import 'vue-material/dist/theme/default.css';
+import './assets/styles/theme.scss';
 import i18n from './i18n';
 
 firebase.initializeApp(config.firebase);
