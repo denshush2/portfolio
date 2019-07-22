@@ -4,4 +4,7 @@ export default {
   components: {
     Photo,
   },
+  data: () => ({
+    // name: this.$t('name'),
+  }),
 };

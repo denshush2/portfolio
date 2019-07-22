@@ -1,12 +1,43 @@
 <div class="navBar">
-  <div><CodeTags class='navBar-icon'/></div>
-  <div class="navBar-navigation">
-    <span
-      :class="isActive == item.name ? ['navBar-navigation-link-active','navBar-navigation-link']:'navBar-navigation-link'"
-      v-for="(item, index) in menu"
-      @click="changeRoute(item.name, index)"
-      >{{ item.name }}</span
-    >
-  </div>
-  <div><CodeTags class='navBar-icon'/></div>
+  <md-toolbar class="md-primary">
+    <md-button class="md-icon-button" @click="showNavigation = true">
+      <md-icon>menu</md-icon>
+    </md-button>
+    <span class="md-title">{{$t('webSiteName')}}</span>
+
+    <div class="md-toolbar-section-end">
+      <a @click="setLocale('ru')"><country-flag  country='ru' size='normal'/></a>
+      <a @click="setLocale('en')"><country-flag  country='us' size='normal'/></a>
+      <a @click="setLocale('es')"><country-flag  country='co' size='normal'/></a>
+    </div>
+  </md-toolbar>
+
+  <md-drawer :md-active.sync="showNavigation" md-swipeable>
+    <md-toolbar class="md-transparent" md-elevation="0">
+      <span class="md-title">{{$t('navBar.name')}}</span>
+    </md-toolbar>
+
+    <md-list>
+
+      <md-list-item :to="{name:'Home'}">
+        <md-icon>home</md-icon>
+        <span class="md-list-item-text">{{$t('navBar.items.home')}}</span>
+      </md-list-item>
+
+      <md-list-item :to="{name:'Blog'}">
+        <md-icon>book</md-icon>
+        <span class="md-list-item-text">{{$t('navBar.items.blog')}}</span>
+      </md-list-item>
+
+      <md-list-item :to="{name:'Projects'}">
+        <md-icon>card_travel</md-icon>
+        <span class="md-list-item-text">{{$t('navBar.items.projects')}}</span>
+      </md-list-item>
+
+      <md-list-item :to="{name:'CV'}">
+        <md-icon>face</md-icon>
+        <span class="md-list-item-text">{{$t('navBar.items.cv')}}</span>
+      </md-list-item>
+    </md-list>
+  </md-drawer>
 </div>
